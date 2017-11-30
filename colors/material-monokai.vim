@@ -232,6 +232,7 @@ call s:h("jsSuper",             { "fg": s:aqua })
 call s:h("jsFuncArgRest",       { "fg": s:purple, "format": "italic" })
 call s:h("jsFuncArgs",          { "fg": s:orange, "format": "italic" })
 call s:h("jsStorageClass",      { "fg": s:aqua })
+call s:h("jsVariableDef",       { "fg": s:purple })
 call s:h("jsDocTags",           { "fg": s:aqua,   "format": "italic" })
 " pangloss/vim-javascript
 call s:h('jsArrowFunction',      { "fg": s:green, })
