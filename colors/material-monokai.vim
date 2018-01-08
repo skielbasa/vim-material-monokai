@@ -355,3 +355,7 @@ call s:h("mkdCode",                     { "fg": s:white })
 call s:h("mkdLink",                     { "fg": s:green })
 call s:h("mkdListItem",                 { "fg": s:orange })
 call s:h("mkdURL",                      { "fg": s:pink })
+
+" Jinja
+call s:h("jinjaVarBlock",               { "fg": s:orange })
+call s:h("jinjaTagBlock",               { "fg": s:pink })
