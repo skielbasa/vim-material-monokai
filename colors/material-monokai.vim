@@ -120,6 +120,9 @@ call s:h("VertSplit",     { "fg": s:grey,       "bg": s:darkgrey })
 call s:h("LineNr",        { "fg": s:grey,       "bg": s:darkgrey })
 call s:h("CursorLineNr",  { "fg": s:aqua,       "bg": s:darkblack })
 call s:h("SignColumn",    {                     "bg": s:lightblack })
+call s:h("SpellBad",      { "fg": s:red,        "bg": s:yellow })
+call s:h("SpellCap",      {                                           "format": "underline"})
+call s:h("SpellLocal",    { "fg": s:yellow,                           "format": "underline"})
 
 " misc
 call s:h("SpecialKey",    { "fg": s:coolgrey })
