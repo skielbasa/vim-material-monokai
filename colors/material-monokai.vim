@@ -216,6 +216,14 @@ if g:materialmonokai_custom_lint_indicators == 1
   let g:ale_sign_warning = '●'
 endif
 
+" Git Gutter
+" ---------
+
+call s:h("GitGutterAdd",          { "fg": s:green,  "bg": s:darkgrey})
+call s:h("GitGutterChange",       { "fg": s:yellow, "bg": s:darkgrey })
+call s:h("GitGutterDelete",       { "fg": s:red,    "bg": s:darkgrey })
+call s:h("GitGutterChangeDelete", { "fg": s:yellow, "bg": s:darkgrey })
+
 " NerdTree
 " --------
 
