@@ -27,6 +27,16 @@ Enable italic comments (terminal permitting) by adding the following to your .vi
 let g:materialmonokai_italic=1
 ```
 
+Enable subtle Spell highlighting:
+```vim
+let g:materialmonokai_subtle_spell=1
+```
+
+Disable the custom ALE indicators if you want to set your own or like the default ones:
+```vim
+let g:materialmonokai_custom_lint_indicators=0
+```
+
 ### Vim Airline Support
 Includes a matching [Airline](https://github.com/vim-airline/vim-airline) theme. To activate it, add the following to your .vimrc file:
 ```vim
