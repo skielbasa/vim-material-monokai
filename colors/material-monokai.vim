@@ -21,6 +21,9 @@ if ! exists("g:materialmonokai_italic")
     let g:materialmonokai_italic = 0
 endif
 
+if ! exists("g:materialmonokai_subtle_spell")
+    let g:materialmonokai_subtle_spell = 0
+endif
 let g:materialmonokai_termcolors = 256 " does not support 16 color term right now.
 
 set background=dark
@@ -121,9 +124,13 @@ call s:h("VertSplit",     { "fg": s:grey,       "bg": s:darkgrey })
 call s:h("LineNr",        { "fg": s:grey,       "bg": s:darkgrey })
 call s:h("CursorLineNr",  { "fg": s:aqua,       "bg": s:darkblack })
 call s:h("SignColumn",    {                     "bg": s:lightblack })
-call s:h("SpellBad",      { "fg": s:red,        "bg": s:yellow })
 call s:h("SpellCap",      {                                           "format": "underline"})
 call s:h("SpellLocal",    { "fg": s:yellow,                           "format": "underline"})
+if g:materialmonokai_subtle_spell == 1
+  call s:h("SpellBad",    {                                           "format": "underline"})
+else
+  call s:h("SpellBad",    { "fg": s:red,        "bg": s:yellow })
+endif
 
 " misc
 call s:h("SpecialKey",    { "fg": s:coolgrey })
