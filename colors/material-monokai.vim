@@ -24,6 +24,11 @@ endif
 if ! exists("g:materialmonokai_subtle_spell")
     let g:materialmonokai_subtle_spell = 0
 endif
+
+if ! exists("g:materialmonokai_custom_lint_indicators")
+    let g:materialmonokai_custom_lint_indicators = 1
+endif
+
 let g:materialmonokai_termcolors = 256 " does not support 16 color term right now.
 
 set background=dark
@@ -199,6 +204,17 @@ call s:h("Comment",       { "fg": s:coolgrey, "format": "italic" })
 call s:h("Underlined",    { "fg": s:green })
 call s:h("Ignore",        {})
 call s:h("Error",         { "fg": s:red, "bg": s:darkred })
+
+" ALE
+" ---
+
+if g:materialmonokai_custom_lint_indicators == 1
+  call s:h("ALEErrorSign",   { "fg": s:red,    "bg": s:darkgrey })
+  call s:h("ALEWarningSign", { "fg": s:yellow, "bg": s:darkgrey })
+
+  let g:ale_sign_error = '●'
+  let g:ale_sign_warning = '●'
+endif
 
 " NerdTree
 " --------
