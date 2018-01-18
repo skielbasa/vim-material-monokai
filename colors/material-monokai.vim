@@ -138,7 +138,7 @@ else
 endif
 
 " misc
-call s:h("SpecialKey",    { "fg": s:coolgrey })
+call s:h("SpecialKey",    { "fg": s:grey })
 call s:h("Title",         { "fg": s:yellow })
 call s:h("Directory",     { "fg": s:aqua })
 
