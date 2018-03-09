@@ -53,6 +53,8 @@ let g:airline#themes#materialmonokai#palette.visual = airline#themes#generate_co
 let g:airline#themes#materialmonokai#palette.inactive = airline#themes#generate_color_map(s:inactive1, s:inactive2, s:inactive3)
 let g:airline#themes#materialmonokai#palette.normal.airline_warning = s:warning
 let g:airline#themes#materialmonokai#palette.normal.airline_error = s:error
+let g:airline#themes#materialmonokai#palette.insert.airline_warning = s:warning
+let g:airline#themes#materialmonokai#palette.insert.airline_error = s:error
 
 if !get(g:, 'loaded_ctrlp', 0)
   finish
