@@ -4,6 +4,10 @@
 " Forked From: Mike Hartington's Oceanicnext
 " ============================================================
 
+if ! exists("g:materialmonokai_subtle_airline")
+    let g:materialmonokai_subtle_airline = 0
+endif
+
 " {{{ Colors
   let s:base00=['#1F292D', '233']
   let s:base01=['#383a3e', '236']
@@ -46,11 +50,23 @@ let s:warning   = [s:base00[0], s:base09[0], s:base00[1], s:base09[1]]
 let s:error     = [s:base00[0], s:base08[0], s:base00[1], s:base08[1]]
 
 let g:airline#themes#materialmonokai#palette = {}
-let g:airline#themes#materialmonokai#palette.normal = airline#themes#generate_color_map(s:normal1, s:normal2, s:normal3)
-let g:airline#themes#materialmonokai#palette.insert = airline#themes#generate_color_map(s:insert1, s:insert2, s:insert3)
-let g:airline#themes#materialmonokai#palette.replace = airline#themes#generate_color_map(s:replace1, s:replace2, s:replace3)
-let g:airline#themes#materialmonokai#palette.visual = airline#themes#generate_color_map(s:visual1, s:visual2, s:visual3)
-let g:airline#themes#materialmonokai#palette.inactive = airline#themes#generate_color_map(s:inactive1, s:inactive2, s:inactive3)
+
+if g:materialmonokai_subtle_airline == 1
+  let g:airline#themes#materialmonokai#palette.normal = airline#themes#generate_color_map(s:normal1, s:normal2, s:normal3, s:normal3, s:normal2, s:normal1)
+  let g:airline#themes#materialmonokai#palette.insert = airline#themes#generate_color_map(s:insert1, s:insert2, s:insert3, s:normal3, s:normal2, s:normal1)
+  let g:airline#themes#materialmonokai#palette.replace = airline#themes#generate_color_map(s:replace1, s:replace2, s:replace3, s:normal3, s:normal2, s:normal1)
+  let g:airline#themes#materialmonokai#palette.visual = airline#themes#generate_color_map(s:visual1, s:visual2, s:visual3, s:normal3, s:normal2, s:normal1)
+  let g:airline#themes#materialmonokai#palette.inactive = airline#themes#generate_color_map(s:inactive1, s:inactive2, s:inactive3, s:normal3, s:normal2, s:normal1)
+  let g:airline#themes#materialmonokai#palette.visual.airline_warning = s:warning
+  let g:airline#themes#materialmonokai#palette.visual.airline_error = s:error
+else
+  let g:airline#themes#materialmonokai#palette.normal = airline#themes#generate_color_map(s:normal1, s:normal2, s:normal3)
+  let g:airline#themes#materialmonokai#palette.insert = airline#themes#generate_color_map(s:insert1, s:insert2, s:insert3)
+  let g:airline#themes#materialmonokai#palette.replace = airline#themes#generate_color_map(s:replace1, s:replace2, s:replace3)
+  let g:airline#themes#materialmonokai#palette.visual = airline#themes#generate_color_map(s:visual1, s:visual2, s:visual3)
+  let g:airline#themes#materialmonokai#palette.inactive = airline#themes#generate_color_map(s:inactive1, s:inactive2, s:inactive3)
+endif
+
 let g:airline#themes#materialmonokai#palette.normal.airline_warning = s:warning
 let g:airline#themes#materialmonokai#palette.normal.airline_error = s:error
 let g:airline#themes#materialmonokai#palette.insert.airline_warning = s:warning
