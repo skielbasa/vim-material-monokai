@@ -42,3 +42,9 @@ Includes a matching [Airline](https://github.com/vim-airline/vim-airline) theme.
 ```vim
 let g:airline_theme='materialmonokai'
 ```
+
+#### Vim Airline Options
+Enable subtle mode indicator. By default both sides of the bar will change color based on the current mode. Turning this setting on will make only the mode label change color. To activate it, add the following to your .vimrc file:
+```vim
+let g:materialmonokai_subtle_airline=1
+```
