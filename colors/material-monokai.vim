@@ -179,6 +179,7 @@ call s:h("Function",      { "fg": s:green })
 
 call s:h("Statement",     { "fg": s:pink })
 call s:h("Operator",      { "fg": s:pink })
+call s:h("OperatorBold",  { "fg": s:pink, "format" : "bold" })
 call s:h("Label",         { "fg": s:pink })
 call s:h("Keyword",       { "fg": s:aqua })
 "        Conditional"
@@ -201,7 +202,11 @@ call s:h("Tag",           { "fg": s:pink })
 call s:h("Todo",          { "fg": s:aqua,     "format": "bold,italic" })
 call s:h("Comment",       { "fg": s:coolgrey, "format": "italic" })
 
-call s:h("Underlined",    { "fg": s:green })
+call s:h("Orange",        { "fg": s:orange })
+call s:h("Bold",          { "format" : "bold" })
+call s:h("Underlined",    { "format" : "underline" })
+call s:h("BoldUnderlined",{ "format" : "bold,underline" })
+call s:h("Strike",				{ "format" : "strikethrough" })
 call s:h("Ignore",        {})
 call s:h("Error",         { "fg": s:red, "bg": s:darkred })
 
@@ -400,3 +405,4 @@ call s:h("org_shade_stars",             { "fg": s:grey })
 call s:h("org_list_unordered",          { "fg": s:orange })
 call s:h("org_list_ordered",            { "fg": s:orange })
 call s:h("org_timestamp",               { "fg": s:pink })
+
